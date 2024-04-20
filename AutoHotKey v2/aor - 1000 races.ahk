@@ -162,12 +162,22 @@ backToMainMenu()
     Send "{s}"
     Sleep 50
     Send "{Enter}"
-    Sleep 250
+    Sleep 500
     Send "{s}"
-    Sleep 50
+    Sleep 500
     Send "{Enter}"
-    Sleep 250
+    Sleep 1000
     Send "{Esc}"
+    Sleep 1500
+    Sleep 50
+}
+
+
+
+flagZero()
+{
+    global
+    LOOP_FLAG := 0
 }
 
 
@@ -192,5 +202,5 @@ main()
 }
 
 ^!r::reloadFunc()       ; Ctrl+Alt+R
-F13::LOOP_FLAG := 0
+F13::flagZero()
 F14::main()
